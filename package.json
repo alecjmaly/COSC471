@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "download_server": "git clone https://github.com/alecjmaly/COSC471-demo-server.git db_server",
-    "install_dependencies": "npm install && cd db_server && npm install",
+    "download_server": "git clone https://github.com/alecjmaly/COSC471-demo-server.git db_server && cd db_server && npm install",
+    "install_dependencies": "npm install && npm run download_server",
     "start_client": "webpack-dev-server --open --mode development",
     "start_server": "cd ./db_server && node server.js",
     "start_local": "concurrently \" npm run start_server \" \" npm run start_client \"",
