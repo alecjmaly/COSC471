@@ -1,5 +1,9 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
+  devServer: {
+    port: process.env.PORT || 9000
+  },
+
   entry: './src/index.js',
   output: {
     publicPath: '/',
