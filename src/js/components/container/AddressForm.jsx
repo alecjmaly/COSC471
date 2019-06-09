@@ -135,7 +135,7 @@ export default class AddressForm extends Component {
   
 
   render() {
-    return (      
+    return (
       <div>
         <p className="h4 mb-4 text-center">{this.props.form_mode === 'new' || this.props.form_data !== 'Address' ? 'New Address' : 'Edit Address'}</p>
         <div className="driver-form">

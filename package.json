@@ -8,9 +8,8 @@
     "install_dependencies": "npm install && cd db_server && npm install",
     "start_server": "npm --prefix ./db_server run start",
     "start_client": "webpack-dev-server --open --mode development",
-    "start": "concurrently \"npm run start_server\" \"npm run start_client\"",
-    "build_OLD": "webpack --mode production",
-    "build": "npm install && cd db_server && npm install",
+    "start": "concurrently \"npm run start_server\" \"node start.js\"",
+    "build": "webpack --mode production",
     "build_db": "node ./src/db/scripts/build_db.js",
     "seed_db": "node ./src/db/scripts/seed_db.js",
     "destroy_db": "node ./src/db/scripts/destroy_db.js"
@@ -19,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "react": "^16.8.6",
