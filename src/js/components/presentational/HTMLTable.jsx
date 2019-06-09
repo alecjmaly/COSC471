@@ -155,7 +155,7 @@ export default class HTMLTable extends Component {
           }
     
           button.onclick = (evt) => {
-            this.props.query_db(qry);
+            await this.props.query_db(qry);
             this.props.query_db('SELECT * FROM People');
           }
           table_cell.appendChild(button);
