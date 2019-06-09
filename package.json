@@ -10,7 +10,7 @@
     "start_client": "webpack-dev-server --open --mode development",
     "start_client_heroku": "webpack-dev-server --open --mode development --port 80",
     "start": "concurrently \"npm run start_server\" \"npm run start_client\"",
-    "start_heroku": "concurrently \"npm run start_server\" \"npm run start_client_heroku\"",
+    "start_heroku": "node start.js",
     "build_OLD": "webpack --mode production",
     "build": "npm install && cd db_server && npm install",
     "build_db": "node ./src/db/scripts/build_db.js",
