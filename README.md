@@ -33,7 +33,7 @@ Otherwise, if Git cli is not installed, [download the zip file](https://github.c
 Navigate to COSC471 folder and run 
 
 ```
-npm run build
+npm run install_dependencies
 ```
 
 ### Step 3: Run Application
