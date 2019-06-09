@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "install_dependencies": "npm install && cd db_server && npm install",
     "start_server": "npm --prefix ./db_server run start",
     "start_client": "webpack-dev-server --open --mode development",
+    "start_client_heroku": "webpack-dev-server --open --mode development --port 80",
     "start": "concurrently \"npm run start_server\" \"npm run start_client\"",
+    "start_heroku": "concurrently \"npm run start_server\" \"npm run start_client_heroku\"",
+    "build_OLD": "webpack --mode production",
     "build": "npm install && cd db_server && npm install",
     "build_db": "node ./src/db/scripts/build_db.js",
     "seed_db": "node ./src/db/scripts/seed_db.js",

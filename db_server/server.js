@@ -34,11 +34,11 @@ app.post('/query', (req, res) => {
   if (req.body.q) {
     console.log('run query');
     let resp = db_functions.runQuery(req.body.q, function(data){
-      console.log(data);
+      //console.log(data);
 
       res.set('Content-Type', 'application/json');
-      console.log('returning');
-      console.log(data);
+      //console.log('returning');
+      //console.log(data);
       res.send(data);
     });
 
