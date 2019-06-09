@@ -187,7 +187,7 @@ export default class HTMLTable extends Component {
             <h2>{this.props.name}</h2>
           </div>
           <div className="gridCell" style={{'textAlign': 'right'}}>
-            <button className='btn btn-primary btn-success' style={{'visibility': this.state.btn_visibility}} name={this.state.btn_name} onClick={(evt) => this.props.navigate(evt)}>{this.state.btn_text}</button>
+            <button className='mybtn btn btn-primary btn-success' style={{'visibility': this.state.btn_visibility}} name={this.state.btn_name} onClick={(evt) => this.props.navigate(evt)}>{this.state.btn_text}</button>
           </div>
         </div>
         <table className='myTable' ref='tableRef'></table>

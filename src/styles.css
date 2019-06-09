@@ -51,6 +51,7 @@ body {
 table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
+
   width: 100%;
   cursor: default;
 }
@@ -198,7 +199,7 @@ table th {
 
 /* Modal Content/Box */
 .modal-content {
-  cursor: move;
+  cursor: default;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;

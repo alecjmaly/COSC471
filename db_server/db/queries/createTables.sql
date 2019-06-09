@@ -1,4 +1,5 @@
 
+
 CREATE TABLE IF NOT EXISTS Address(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   Street_no int,
@@ -116,7 +117,7 @@ CREATE TRIGGER [Populate_Avg_Rating_insert] AFTER INSERT ON [Route] BEGIN
   
   UPDATE [Driver]
   SET    [AVG_DRIVER_RATING] = 
-    (SELECT AVG(Driver_rating) FROM Route WHERE driver_id = [NEW].[driver_id])
+    (SELECT ROUND(AVG(Driver_rating), 2) FROM Route WHERE driver_id = [NEW].[driver_id])
   WHERE [id] = [NEW].[driver_id]; 
 END; ---
 
@@ -214,14 +215,11 @@ CREATE VIEW IF NOT EXISTS Routes
 AS
 SELECT  
   r.id,
-  d.[FULL_NAME] as 'Driver Name',
-  p.[FULL_NAME] as 'Passenger Name',
-  s_a.Street as 'Start Street',
-  s_a.City || ", " || s_a.State  as 'Start City, State',
-  s_a.Zip as 'Start Zip',
-  e_a.Street as 'End Street',
-  e_a.City || ", " || e_a.State as 'End City, State',
-  e_a.Zip as 'End Zip'
+  d.[FULL_NAME] || " (" || r.driver_rating || ")" as 'Driver (rating)',
+  p.[FULL_NAME] || " (" || r.passenger_rating || ")" as 'Passenger (rating)',
+  s_a.Street ||  CHAR(10)  || s_a.City || ", " || s_a.State || " " || s_a.Zip as 'Start Address',
+  e_a.Street ||  CHAR(10)  || e_a.City || ", " || e_a.State || " " || e_a.Zip as 'End Address'
+
 FROM Route r
 INNER JOIN Person d ON d.id = r.driver_id
 INNER JOIN Person p ON p.id = r.passenger_id
