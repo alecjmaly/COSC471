@@ -3,18 +3,19 @@
 # Hosted URL
 
 App is hosted at this URL: https://cosc471demo.herokuapp
+
 API/db server is hosted at this URL: https://cosc471-demo-server.herokuapp.com/
+
 * Please use a modern browser (Chrome, Firefox, etc) - this application has not been polyfilled for IE11 or browers that do not support modern ECMAScript specifications.
 * Please allow a minute for the application and api/db server to wake.
 * This project runs locally using sqlite3. Concurrent connections to database may break the application. Replace SQLite with a db capable of multiple concurrent transactions to take advantage of client/server architecture. 
-
-
 
 
 # Local Hosting
 ### Step 1: Download Application Files
 
 Download instructions assume usage of a Windows PC (cmd), please alter commands if using a different system.
+
 If [Git cli](https://git-scm.com/downloads) is installed, run the cmd statement below.
 
 ```
