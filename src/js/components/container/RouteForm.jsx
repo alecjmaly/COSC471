@@ -242,7 +242,7 @@ export default class RouteForm extends Component {
           <div className="gridCell">
               <h5>Start Address</h5>
           </div>
-          <div className="gridCell">
+          <div className="doubleCell">
             <select className='form-control' id='start_address_id' onChange={(evt) => this.handleChange(evt)} onClick={() => this.getAddresses()} value={this.state.start_address_id} >
               <option></option>
               {this.state.addresses.map(row => {
@@ -250,14 +250,13 @@ export default class RouteForm extends Component {
               })}
             </select>
           </div>
-          <div className="gridCell"></div>
 
 
           {/* End Address */}
           <div className="gridCell">
               <h5>End Address</h5>
           </div>
-          <div className="gridCell">
+          <div className="doubleCell">
             <select className='form-control' id='end_address_id' onChange={(evt) => this.handleChange(evt)} onClick={() => this.getAddresses()} value={this.state.end_address_id} >
               <option></option>
               {this.state.addresses.map(row => {
@@ -265,7 +264,6 @@ export default class RouteForm extends Component {
               })}
             </select>
           </div>
-          <div className="gridCell"></div>
 
         </div>
 

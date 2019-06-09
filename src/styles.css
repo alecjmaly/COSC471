@@ -124,6 +124,15 @@ table th {
 }
 
 
+.doubleCell {
+  display: grid;
+  text-align: center; 
+  grid-column-start: auto;
+  grid-row-start: auto;
+  grid-column: 2 / span 2;
+}
+
+
 
 .driver-form {
   display: grid;
@@ -146,7 +155,7 @@ table th {
   display: grid;
   column-gap: 2rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
     "gridCell gridCell gridCell gridCell"
     "gridCell gridCell gridCell gridCell";
@@ -155,16 +164,14 @@ table th {
 .route-form {
   display: grid;
   column-gap: 2rem;
-  grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 
     "gridCell gridCell gridCell"
     "gridCell gridCell gridCell"
-    "gridCell gridCell gridCell"
-    "gridCell gridCell gridCell";
+    "gridCell doubleCell"
+    "gridCell doubleCell";
 }
-
 
 
 
