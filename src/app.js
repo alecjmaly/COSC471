@@ -51,6 +51,12 @@ class App extends Component {
     this.query_db = this.query_db.bind(this);
   }
 
+
+  // Ping to wake API server 
+  componentDidMount() {
+    fetch(root_uri, { mode: 'cors' })  
+  }
+
   async navigate(evt) {
     var page_history_arr = this.state.page_history;
     page_history_arr.push({ 
