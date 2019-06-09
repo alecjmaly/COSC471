@@ -4,13 +4,12 @@ import DynamicContent from './js/components/container/DynamicContent.jsx';
 import './styles.css';
 
 
-import app_config from './app_config.json';
-const root_uri = app_config.root_uri;
-
 import Modal from './js/components/presentational/Modal.jsx';
-
-
 import gProvider from './js/components/Providers/GetGlobal.jsx';
+
+const root_uri = process.env.PORT ? "https://cosc471-demo-server.herokuapp.com" : "http://localhost:3000";
+
+
 
 
 
@@ -171,6 +170,7 @@ class App extends Component {
       method: 'POST',
       mode: 'cors',
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json'  
       },
       body: JSON.stringify({
