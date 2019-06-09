@@ -23,7 +23,7 @@ Otherwise, [download the zip file](https://github.com/alecjmaly/COSC471/archive/
 Navigate to COSC471 folder and run 
 
 ```
-npm run install_dependencies
+npm run build
 ```
 
 ## Run Application
