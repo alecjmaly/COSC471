@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 import DynamicContent from './js/components/container/DynamicContent.jsx';
 import './styles.css';
 
-
 import Modal from './js/components/presentational/Modal.jsx';
 import gProvider from './js/components/Providers/GetGlobal.jsx';
 
-const root_uri = process.env.PORT ? "https://cosc471-demo-server.herokuapp.com" : "http://localhost:3000";
+const root_uri = process.env.PORT !== undefined ? "https://cosc471-demo-server.herokuapp.com" : "http://localhost:3000";
 
 
 
