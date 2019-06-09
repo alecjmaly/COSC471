@@ -16,15 +16,11 @@ API/db server is hosted at this URL: https://cosc471-demo-server.herokuapp.com/
 
 Download instructions assume usage of a Windows PC (cmd), please alter commands if using a different system.
 
-If [Git cli](https://git-scm.com/downloads) is installed, run the cmd statement below.
+Download [Git cli](https://git-scm.com/downloads) and run the cmd statement below.
 
 ```
 git clone https://github.com/alecjmaly/COSC471.git && cd COSC471
 ```
-
-Otherwise, if Git cli is not installed, [download the zip file](https://github.com/alecjmaly/COSC471/archive/master.zip) on this page and extract to computer; then navigate to COSC471 folder using command prompt.
-
-
 
 ### Step 2: Install Dependencies
 
