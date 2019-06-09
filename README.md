@@ -41,7 +41,7 @@ npm run install_dependencies
 From COSC471 folder, run the following command.
 
 ```
-npm run start
+npm run start_local
 ```
 
 ## Notes
