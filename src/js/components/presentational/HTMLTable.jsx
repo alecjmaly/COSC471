@@ -154,7 +154,7 @@ export default class HTMLTable extends Component {
               qry = `DELETE FROM Passenger WHERE id=${row['id']}`
           }
     
-          button.onclick = (evt) => {
+          button.onclick = async (evt) => {
             await this.props.query_db(qry);
             this.props.query_db('SELECT * FROM People');
           }
