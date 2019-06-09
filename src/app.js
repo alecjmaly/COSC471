@@ -6,7 +6,7 @@ import './styles.css';
 import Modal from './js/components/presentational/Modal.jsx';
 import gProvider from './js/components/Providers/GetGlobal.jsx';
 
-const root_uri = process.env.PORT !== undefined ? "https://cosc471-demo-server.herokuapp.com" : "http://localhost:3000";
+const root_uri = process.env ? "https://cosc471-demo-server.herokuapp.com" : "http://localhost:3000";
 
 
 
