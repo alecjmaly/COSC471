@@ -312,31 +312,35 @@ class DriverForm extends Component {
           <h3 className='label label-defailt'>Vehicle Details</h3>
           <div className="car-details-form">
             <div className="gridCell">
-              <input type="text" id="license_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Drivers License Number" value={this.state.license_no} />
+              <label className='float-left'>License Number</label>
+              <input type="text" id="license_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.license_no} />
             </div>
             <div className="gridCell">
-              <input type="number" id="vin_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="VIN Number" value={this.state.vin_no} />
+              <label className='float-left'>VIN Number</label>
+              <input type="number" id="vin_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.vin_no} />
             </div>
             <div className="gridCell">
-              <input type="text" id="license_plate_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="License Plate Number" value={this.state.license_plate_no} />
+              <label className='float-left'>License Plate Number</label>
+              <input type="text" id="license_plate_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.license_plate_no} />
             </div>
             <div className="gridCell">
-              <input type="text" id="make" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Make" value={this.state.make} />
+              <label className='float-left'>Make</label>
+              <input type="text" id="make" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.make} />
             </div>
             <div className="gridCell">
-              <input type="text" id="model" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Model" value={this.state.model} />
+              <label className='float-left'>Model</label>
+              <input type="text" id="model" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.model} />
             </div>
             <div className="gridCell">
-              <input type="number" id="year" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Year" value={this.state.year} />
+              <label className='float-left'>Year</label>
+              <input type="number" id="year" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.year} />
             </div>
             <div className="gridCell">
-              <input type="text" id="color" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Color" value={this.state.color} />
-            </div>
-            
-            
+              <label className='float-left'>Color</label>
+              <input type="text" id="color" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.color} />
+            </div>  
           </div>
           
-          <br />
           <div className="row">
             <div className="col">
               <button className="btn btn-success btn-block" onClick={(evt) => this.handleSubmit(evt)} type="submit">{this.props.form_mode === 'new' ? 'Create Driver' : 'Update Driver'}</button> 

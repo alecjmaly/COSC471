@@ -10,6 +10,14 @@
   color: green;
 }
 
+.center-block {
+  justify-content: center;
+}
+
+.alignSelf-center {
+  align-self: center;
+}
+
 
 .App {
   background: rgba(235,235,235,.75);
@@ -29,6 +37,10 @@ body {
 
 .mybtn {
   width: 10em;
+}
+
+.float-left {
+  float: left;
 }
 
 .icon {
@@ -51,7 +63,6 @@ body {
 table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-
   width: 100%;
   cursor: default;
 }
@@ -105,10 +116,11 @@ table th {
 }
 
 .gridCell { 
+  display: grid;
   text-align: center;
   grid-column-start: auto;
   grid-row-start: auto;
-  height: 50px;
+  height: 80px;
 }
 
 

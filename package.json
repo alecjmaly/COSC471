@@ -14,10 +14,7 @@
     "start_server": "cd ./db_server && node server.js",
     "start_local": "concurrently \" npm run start_server \" \" npm run start_client \"",
     "start": "node start.js",
-    "build": "webpack --mode production",
-    "build_db": "node ./src/db/scripts/build_db.js",
-    "seed_db": "node ./src/db/scripts/seed_db.js",
-    "destroy_db": "node ./src/db/scripts/destroy_db.js"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",

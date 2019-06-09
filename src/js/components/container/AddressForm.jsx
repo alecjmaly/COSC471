@@ -140,24 +140,31 @@ export default class AddressForm extends Component {
         <p className="h4 mb-4 text-center">{this.props.form_mode === 'new' || this.props.form_data !== 'Address' ? 'New Address' : 'Edit Address'}</p>
         <div className="driver-form">
           <div className="gridCell">
-            <input type="number" id="street_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Street Number" value={this.state.street_no} />  
+            <label className='text-left'>Street Number</label>
+            <input type="number" id="street_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.street_no} />  
           </div>
           <div className="gridCell">
-            <input type="text" id="street" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Street" value={this.state.street} />
+            <label className='text-left'>Street</label>
+            <input type="text" id="street" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.street} />
           </div>
           <div className="gridCell">
-            <input type="text" id="city" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="City" value={this.state.city} />
+            <label className='text-left'>City</label>
+            <input type="text" id="city" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.city} />
           </div>
           <div className="gridCell">
-            <input type="text" id="state" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="State" value={this.state.state} />
+            <label className='text-left'>State</label>
+            <input type="text" id="state" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.state} />
           </div>
-          <div className="gridCell">
-            <input type="number" id="zip" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Zip" value={this.state.zip} />
+          <div className="gridCell">  
+            <label className='text-left'>Zip</label>
+            <input type="number" id="zip" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.zip} />
           </div>
-        
-          <button className='btn btn-info btn-block' onClick={(evt) => this.handleSubmit(evt)}>
-            {this.props.form_mode === 'new' || this.props.form_data !== 'Address' ? 'Add Address' : 'Save Changes'}
-          </button>
+          <div className="gridCell">  
+            <label className='text-left'>&nbsp;</label>
+            <button className='btn btn-info btn-block' onClick={(evt) => this.handleSubmit(evt)}>
+              {this.props.form_mode === 'new' || this.props.form_data !== 'Address' ? 'Add Address' : 'Save Changes'}
+            </button>
+          </div>
         </div>
       </div>
     )

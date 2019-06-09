@@ -215,7 +215,9 @@ export default class RouteForm extends Component {
             </select> 
           </div>
           <div className='gridCell'>
-            <input type="number" id="driver_rating" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Passenger Rating" value={this.state.driver_rating} />
+            <div className='center-block'>
+              <input type="number" id="driver_rating" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Passenger Rating" value={this.state.driver_rating} />
+            </div>
           </div>
 
           {/* Passenger */}
@@ -231,7 +233,9 @@ export default class RouteForm extends Component {
             </select> 
           </div>
           <div className='gridCell'>
-            <input type="number" id="passenger_rating" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Passenger Rating" value={this.state.passenger_rating} />
+            <div className='center-block'>
+              <input type="number" id="passenger_rating" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Driver Rating" value={this.state.passenger_rating} />
+            </div>
           </div>
 
           {/* Start Address */}

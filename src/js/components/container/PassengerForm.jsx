@@ -241,11 +241,13 @@ class PassengerForm extends Component {
           
 
           <div className='creditcard-form'>
-            <div className='gridCell'>
-              <input type="credit_card_no" id="credit_card_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Credit Card Number" value={this.state.credit_card_no} />
+            <div className='gridCell'>  
+              <label className='float-left'>Credit Card Number</label>
+              <input type="credit_card_no" id="credit_card_no" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='12 digit card number + 3 digit security code' value={this.state.credit_card_no} />
             </div>
             <div className='gridCell'>
-              <select type="exp_mo" id="exp_mo" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Expiration Month" value={this.state.exp_mo}>
+              <label className='float-left'>Expiration Month</label>
+              <select type="exp_mo" id="exp_mo" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.exp_mo}>
                 <option></option>
                 <option value='01'>Jan</option>
                 <option value='02'>Feb</option>
@@ -262,7 +264,8 @@ class PassengerForm extends Component {
               </select>
             </div>
             <div className='gridCell'>
-              <select type="exp_year" id="exp_year" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder="Expiration Year" value={this.state.exp_year}>
+              <label className='float-left'>Expiration Year</label>
+              <select type="exp_year" id="exp_year" className="form-control mb-4" onChange={(evt) => this.handleChange(evt)} placeholder='' value={this.state.exp_year}>
                 <option></option>
                 <option value='2019'>2019</option>
                 <option value='2020'>2020</option>
