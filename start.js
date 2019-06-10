@@ -1,7 +1,8 @@
-// in sublime
+// starts application server in Heroku using process.env.PORT 
 var express = require('express');
 var port = process.env.PORT || 8000;
 var app = express();
+
 
 app.set("view options", {layout: false});
 app.use(express.static(__dirname + '/dist'));

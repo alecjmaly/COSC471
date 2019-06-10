@@ -6,6 +6,7 @@ import './styles.css';
 import Modal from './js/components/presentational/Modal.jsx';
 import gProvider from './js/components/Providers/GetGlobal.jsx';
 
+// sets server URL to heroku if environment variables exist. Otherwise, use localhost API server
 const root_uri = process.env ? "https://cosc471-demo-server.herokuapp.com" : "http://localhost:3000";
 
 
@@ -57,6 +58,7 @@ class App extends Component {
   }
 
   async navigate(evt) {
+    // set page history
     var page_history_arr = this.state.page_history;
     page_history_arr.push({ 
       name: this.state.name,
@@ -70,6 +72,7 @@ class App extends Component {
       data: this.state.data 
     });
 
+    
     switch (evt.target.attributes.name.value) {
       case 'home':
         this.setState({ type: 'home' })
@@ -99,6 +102,7 @@ class App extends Component {
 
         break;
 
+      // functions to get table data and navigate to table data
       case 'getPeople':
         this.setState({ type: 'table', form_data: 'People', table_qry: 'SELECT * FROM People'}, () => this.query_db(this.state.table_qry))
         break;
@@ -121,7 +125,7 @@ class App extends Component {
         this.setState({ type: 'table', form_data: 'Address', table_qry: 'SELECT * FROM Addresses' }, () => this.query_db(this.state.table_qry))
         break;
 
-      // new
+      // call form views
       case 'newAddress':
         this.setState({ type: 'address_form', form_data: 'Address', form_mode: 'new' })
         break;

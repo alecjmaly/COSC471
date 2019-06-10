@@ -12,6 +12,7 @@ export default class Modal extends Component {
     this.escFunction = this.escFunction.bind(this);
   }
 
+  // close modal upon esc key press
   escFunction() {
     if(event.keyCode === 27) {
       this.props.close_modal();
@@ -30,8 +31,6 @@ export default class Modal extends Component {
     this.refs.titleRef.innerHTML = this.props.modal_data.title;
     this.refs.msgRef.innerHTML = this.props.modal_data.msg;
   }
-
- 
   
 
   render() {
