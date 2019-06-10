@@ -54,7 +54,22 @@ class App extends Component {
 
   // Ping to wake API server 
   componentDidMount() {
-    fetch(root_uri, { mode: 'cors' })  
+    this.setState({
+      modal_data: {
+        title: 'Waking DB/API server', 
+        msg: 'Please wait while the API server is woken up. Free hosting results in it going to sleep after periods of inactivity', 
+        type: 'modal-normal'
+      }
+    }, async function() {
+      await fetch(root_uri, { mode: 'cors' })
+      .then(() => this.setState({
+        modal_data: {
+          title: '', 
+          msg: '', 
+          type: 'modal-normal'
+        }
+      }))
+    });
   }
 
   async navigate(evt) {
